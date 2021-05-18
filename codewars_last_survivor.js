@@ -17,6 +17,10 @@ All numbers are valid.
 There can be duplicate letters and numbers.
 */
 
-function lastSurvivor(letters, coords) {
-
+const lastSurvivor = (letters, coords) => {
+    letters = letters.split('');
+        for (let i = 0; i < coords.length; i++) {
+            letters.splice(coords[i], 1)
+        }
+        return letters.join('')
 }
